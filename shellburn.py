@@ -34,10 +34,8 @@ def step1():
 
     lhost = sys.argv[1]
     lport = sys.argv[2]
-
-    line_maker(lhost,lport)
     host_n_port = [lhost,lport]
-
+    print(f"[>]YourIP: {lhost} [>]Port: {lport}")
     return host_n_port
 
     del lhost,lport,host_n_port
