@@ -64,15 +64,15 @@ def step1():
 
 def line_maker(arg1,arg2):
     
-    header = "+"+"-"*len(arg1)+"+"+"-"*len(arg2)+"+"
-    middle = "|"+arg1+"|"+arg2+"|"
-    footer = "+"+"-"*len(arg1)+"+"+"-"*len(arg2)+"+"
+    header = "+"+"-"*len(arg1)+"+"+"-"*len(arg2)+">>"
+    middle = "|"+arg1+"|"+arg2+"."
+    #footer = "+"+"-"*len(arg1)+"+"+"-"*len(arg2)+"+"
     
     print(header)
     print(middle)
-    print(footer)
+    #print(footer)
 
-    del header,middle,footer
+    del header,middle
     
 def step2():
     
@@ -89,11 +89,14 @@ def step2():
 def step3(array):
     
     counter = 0
-
+    print(bcolors.GREEN)
     for i in array:
         line_maker(str(counter),i)
         counter += 1
-        
+     
+    spacer = len(array[len(array)-1])
+    print("+-+"+"-"*spacer+">>")
+    print(bcolors.ENDC)
     print("[+]Select the Number of payload")
     
     while True:
@@ -104,6 +107,7 @@ def step3(array):
             break
     
     return chose
+    
 
 def step4(host_n_port,array,chose):
 
@@ -128,4 +132,3 @@ def main():
 if __name__ == "__main__":
 
     main()
-
