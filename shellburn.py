@@ -108,7 +108,6 @@ def step3(array):
     
     return chose
     
-
 def step4(host_n_port,array,chose):
 
     lhost,lport = host_n_port
@@ -118,9 +117,6 @@ def step4(host_n_port,array,chose):
 
     exec(cmd)
     
-
-
-
 def main():
 
     init()
