@@ -3,8 +3,8 @@
   
   first args are host, 2nd args to port
   
-```$ ./shellburn.py 127.0.0.1 1234
-
+```
+$ ./shellburn.py 127.0.0.1 1234
 
  (                                              
  )\ )    )       (   (    (                     
