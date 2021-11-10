@@ -90,3 +90,14 @@ choise the number and then display the payload and that's included host and port
 $ 
 
 ```
+# Execute like a Command in anywhere
+
+```
+git clone 
+cd shellburn
+chmod +x shellburn.py
+sudo cp shellburn.py /usr/local/bin/shellburn
+sudo cp shellpalm /usr/local/bin/shellpalm
+```
+
+
