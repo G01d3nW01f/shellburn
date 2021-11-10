@@ -93,7 +93,7 @@ $
 # Execute like a Command in anywhere
 
 ```
-git clone 
+git clone https://github.com/Ki11i0n4ir3/shellburn.git
 cd shellburn
 chmod +x shellburn.py
 sudo cp shellburn.py /usr/local/bin/shellburn
