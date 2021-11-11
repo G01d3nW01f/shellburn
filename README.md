@@ -94,10 +94,17 @@ $
 
 ```
 git clone https://github.com/Ki11i0n4ir3/shellburn.git
+
 cd shellburn
+
 chmod +x shellburn.py
+
 sudo cp shellburn.py /usr/local/bin/shellburn
+
 sudo cp -r shellpalm /usr/local/bin/shellpalm
+
+./shellburn <Lhost> <Lport>
+
 ```
 
 
