@@ -108,3 +108,4 @@ sudo cp -r shellpalm /usr/local/bin/shellpalm
 ```
 
 
+![alt text](https://github.com/Ki11i0n4ir3/gifs/blob/main/kids_geek.gif)
