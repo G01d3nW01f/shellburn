@@ -103,7 +103,7 @@ sudo cp shellburn.py /usr/local/bin/shellburn
 
 sudo cp -r shellpalm /usr/local/bin/shellpalm
 
-./shellburn <Lhost> <Lport>
+shellburn <Lhost> <Lport>
 
 ```
 
